@@ -46,94 +46,130 @@
 
 
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Escape the PhD Labyrinth.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Escape the PhD Labyrinth" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="00000000-0000-0000-0000-000000000000" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">
-    你从长达三小时的答辩中醒来，却发现自己被困在了一座名为“博士楼”的密室中。
+<tw-storydata name="Escape the PhD Labyrinth" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="00000000-0000-0000-0000-000000000000" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script>
 
-    八扇门分别通往你博士旅程的八个阶段。每扇门背后都有一道谜题。全部通关，你就能真正“毕业”。
+<tw-passagedata pid="1" name="Start" position="100,100">
+You wake up from a three-hour-long defense to find yourself trapped in a mysterious place called the “PhD Labyrinth.”
 
-    [[进入开题地牢-&gt;Room1]]
-  </tw-passagedata><tw-passagedata pid="2" name="Room1" tags="" position="200,100" size="100,100">
-    🗂 开题地牢：墙上密密麻麻贴着旧文献与开题PPT。
+Eight doors lie ahead, each representing a stage of your doctoral journey. Solve the puzzle behind each one to truly graduate.
 
-    **问题：Transformer 的 self-attention 中，QK^T 的含义是？**
+[[Enter the Proposal Dungeon->Room1]]
+</tw-passagedata>
 
-    [[Query-和键的相似度-&gt;Room2]]
-    [[模型的预测输出-&gt;Fail1]]
-    [[训练参数权重-&gt;Fail1]]
-  </tw-passagedata><tw-passagedata pid="3" name="Room2" tags="" position="300,100" size="100,100">
-    📚 实验室混乱室：满地是乱码数据和烧焦的树莓派。
+<tw-passagedata pid="2" name="Room1" position="200,100">
+🗂 Proposal Dungeon: The walls are covered in old papers and slides from your proposal.
 
-    **问题：以下哪个现象最可能说明模型过拟合？**
+**Question: In Transformer’s self-attention, what does QK^T represent?**
 
-    [[训练准确率高，但测试准确率低-&gt;Room3]]
-    [[训练和测试准确率都低-&gt;Fail2]]
-    [[两者都非常高-&gt;Fail2]]
-  </tw-passagedata><tw-passagedata pid="4" name="Room3" tags="" position="400,100" size="100,100">
-    📬 投稿地狱间：桌上有三封审稿邮件。
+[[Similarity between queries and keys->Room2]]
+[[Predicted model outputs->Fail1]]
+[[Trainable parameter weights->Fail1]]
+</tw-passagedata>
 
-    **问题：哪封审稿邮件最可能表示论文被接收？**
+<tw-passagedata pid="3" name="Room2" position="300,100">
+📚 Chaotic Lab Room: The floor is littered with corrupted data and scorched Raspberry Pis.
 
-    [[&quot;我们非常欣赏您的工作...&quot; &quot;建议录用，需小修&quot;-&gt;Room4]]
-    [[&quot;需要重大修改，实验不足&quot;-&gt;Fail3]]
-    [[&quot;不在本刊范围内，建议转投&quot;-&gt;Fail3]]
-  </tw-passagedata><tw-passagedata pid="5" name="Room4" tags="" position="500,100" size="100,100">
-    🎓 答辩审判室：评委们冷冷盯着你。
+**Question: Which phenomenon most likely indicates overfitting?**
 
-    **问题：图神经网络 GCN 中，邻接矩阵为何要加单位矩阵？**
+[[High training accuracy, low test accuracy->Room3]]
+[[Both training and test accuracy are low->Fail2]]
+[[Both are very high->Fail2]]
+</tw-passagedata>
 
-    [[防止孤立节点信息丢失-&gt;Room5]]
-    [[提高训练速度-&gt;Fail4]]
-    [[减少过拟合-&gt;Fail4]]
-  </tw-passagedata><tw-passagedata pid="6" name="Room5" tags="" position="600,100" size="100,100">
-    🧠 焦虑走廊：墙壁上贴着各种deadline与倒计时。
+<tw-passagedata pid="4" name="Room3" position="400,100">
+📬 Submission Hell Chamber: Three reviewer emails lie on the desk.
 
-    **问题：以下哪个最常引发博士焦虑？**
+**Question: Which email most likely indicates acceptance?**
 
-    [[长时间无回应的投稿-&gt;Room6]]
-    [[吃饭太规律-&gt;Fail5]]
-    [[水论文太多-&gt;Fail5]]
-  </tw-passagedata><tw-passagedata pid="7" name="Room6" tags="" position="700,100" size="100,100">
-    ⌛ 拖延时间域：一个钟表不停滴答滴答。
+[["We really appreciate your work..." "Minor revisions required"->Room4]]
+[["Major revision needed, insufficient experiments"->Fail3]]
+[["Out of scope, please consider another journal"->Fail3]]
+</tw-passagedata>
 
-    **问题：你准备答辩 PPT 的前一天晚上在干嘛？**
+<tw-passagedata pid="5" name="Room4" position="500,100">
+🎓 Defense Tribunal Room: The committee members stare at you coldly.
 
-    [[在做最后修改-&gt;Room7]]
-    [[打游戏-&gt;Fail6]]
-    [[完全没准备-&gt;Fail6]]
-  </tw-passagedata><tw-passagedata pid="8" name="Room7" tags="" position="800,100" size="100,100">
-    🔐 毕业之门前。
+**Question: Why is the identity matrix added to the adjacency matrix in GCN?**
 
-    **最后的问题： 请写出你的导师姓氏，以完成最后的毕业登记。**
+[[To prevent information loss from isolated nodes->Room5]]
+[[To improve training speed->Fail4]]
+[[To reduce overfitting->Fail4]]
+</tw-passagedata>
 
-    [[张-&gt;Room8]]
-    [[李-&gt;Fail7]]
-    [[王-&gt;Fail7]]
-  </tw-passagedata><tw-passagedata pid="9" name="Room8" tags="" position="900,100" size="100,100">
-    🎉 恭喜你，博士之旅成功毕业！你逃出了博士楼，迎来了真正的自由。
+<tw-passagedata pid="6" name="Room5" position="600,100">
+🧠 Anxiety Hallway: The walls are filled with deadlines and ticking clocks.
 
-    愿你以后的人生不再有 reviewer 2。
-  </tw-passagedata><tw-passagedata pid="10" name="Fail1" tags="" position="200,300" size="100,100">
-    ❌ 回答错误：你困在了开题地牢多了一周。
-    [[重试-&gt;Room1]]
-  </tw-passagedata><tw-passagedata pid="11" name="Fail2" tags="" position="300,300" size="100,100">
-    ❌ 回答错误：实验失败，花费两周重跑。
-    [[重试-&gt;Room2]]
-  </tw-passagedata><tw-passagedata pid="12" name="Fail3" tags="" position="400,300" size="100,100">
-    ❌ 回答错误：你被拒稿了，情绪低落一周。
-    [[重试-&gt;Room3]]
-  </tw-passagedata><tw-passagedata pid="13" name="Fail4" tags="" position="500,300" size="100,100">
-    ❌ 回答错误：评委摇头，你被延迟答辩。
-    [[重试-&gt;Room4]]
-  </tw-passagedata><tw-passagedata pid="14" name="Fail5" tags="" position="600,300" size="100,100">
-    ❌ 回答错误：你被焦虑吞噬，陷入深夜崩溃。
-    [[重试-&gt;Room5]]
-  </tw-passagedata><tw-passagedata pid="15" name="Fail6" tags="" position="700,300" size="100,100">
-    ❌ 回答错误：你在答辩中被老师犀利追问。
-    [[重试-&gt;Room6]]
-  </tw-passagedata><tw-passagedata pid="16" name="Fail7" tags="" position="800,300" size="100,100">
-    ❌ 回答错误：系统识别失败，未能毕业。
-    [[重试-&gt;Room7]]
-  </tw-passagedata></tw-storydata>
+**Question: What most commonly triggers PhD anxiety?**
+
+[[Long silence after submission->Room6]]
+[[Eating too regularly->Fail5]]
+[[Publishing too many weak papers->Fail5]]
+</tw-passagedata>
+
+<tw-passagedata pid="7" name="Room6" position="700,100">
+⌛ Procrastination Zone: A loud ticking clock echoes in the background.
+
+**Question: What were you doing the night before your defense slides were due?**
+
+[[Making final edits->Room7]]
+[[Gaming->Fail6]]
+[[Didn’t prepare at all->Fail6]]
+</tw-passagedata>
+
+<tw-passagedata pid="8" name="Room7" position="800,100">
+🔐 Graduation Gate:
+
+**Final question: Please enter your advisor’s last name to complete graduation registration.**
+
+[[Zhang->Room8]]
+[[Li->Fail7]]
+[[Wang->Fail7]]
+</tw-passagedata>
+
+<tw-passagedata pid="9" name="Room8" position="900,100">
+🎉 Congratulations! You’ve completed the PhD journey and escaped the Labyrinth.
+
+May your future be free from Reviewer 2.
+</tw-passagedata>
+
+<!-- Fail paths -->
+<tw-passagedata pid="10" name="Fail1" position="200,300">
+❌ Wrong answer: You’re trapped in the proposal dungeon for another week.
+[[Try again->Room1]]
+</tw-passagedata>
+
+<tw-passagedata pid="11" name="Fail2" position="300,300">
+❌ Wrong answer: The experiment failed. It’ll take two weeks to rerun.
+[[Try again->Room2]]
+</tw-passagedata>
+
+<tw-passagedata pid="12" name="Fail3" position="400,300">
+❌ Wrong answer: Your paper got rejected, you spend a week sulking.
+[[Try again->Room3]]
+</tw-passagedata>
+
+<tw-passagedata pid="13" name="Fail4" position="500,300">
+❌ Wrong answer: The committee frowns. Your defense is postponed.
+[[Try again->Room4]]
+</tw-passagedata>
+
+<tw-passagedata pid="14" name="Fail5" position="600,300">
+❌ Wrong answer: Anxiety consumes you in a late-night spiral.
+[[Try again->Room5]]
+</tw-passagedata>
+
+<tw-passagedata pid="15" name="Fail6" position="700,300">
+❌ Wrong answer: You’re grilled in your defense for lack of preparation.
+[[Try again->Room6]]
+</tw-passagedata>
+
+<tw-passagedata pid="16" name="Fail7" position="800,300">
+❌ Wrong answer: The system fails to verify your name. Graduation denied.
+[[Try again->Room7]]
+</tw-passagedata>
+
+</tw-storydata>
+
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
