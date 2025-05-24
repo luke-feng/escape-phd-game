@@ -49,125 +49,189 @@
 <tw-storydata name="Escape the PhD Labyrinth" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="00000000-0000-0000-0000-000000000000" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script>
 
 <tw-passagedata pid="1" name="Start" position="100,100">
-You wake up from a three-hour-long defense to find yourself trapped in a mysterious place called the “PhD Labyrinth.”
+You wake up from a two-hour-long defense to find yourself trapped in a mysterious place called the “PhD Labyrinth.”
 
 Eight doors lie ahead, each representing a stage of your doctoral journey. Solve the puzzle behind each one to truly graduate.
 
-[[Enter the Proposal Dungeon->Room1]]
+[[Enter the Paper Dungeon->Room1]]
 </tw-passagedata>
 
 <tw-passagedata pid="2" name="Room1" position="200,100">
+🗂 Paper Dungeon: The walls are covered in old posters from your papers.
 
 <div style="background: url('office.png') no-repeat center center; background-size: cover; height: 50vh; padding: 2em; color: white;"></div>
-🗂 Proposal Dungeon: The walls are covered in old papers and slides from your proposal.
 
-**Question: In Transformer’s self-attention, what does QK^T represent?**
+**Question: At which venue you published your first demo paper?**
 
-[[Similarity between queries and keys->Room2]]
-[[Predicted model outputs->Fail1]]
-[[Trainable parameter weights->Fail1]]
+[[LCN->RoomPaperSuccess]]
+[[NOMS->Fail1]]
+[[CNMS->Fail1]]
 </tw-passagedata>
 
-<tw-passagedata pid="3" name="Room2" position="300,100">
-📚 Chaotic Lab Room: The floor is littered with corrupted data and scorched Raspberry Pis.
+<tw-passagedata pid="3" name="RoomPaperSuccess" tags="" position="300,100" size="100,100">
+🎉 You first Demo paper was published in IEEE 46th Conference on Local Computer Networks (LCN)
 
-**Question: Which phenomenon most likely indicates overfitting?**
+<div style="background: url('SecGrids.ppm') no-repeat center center; background-size: cover; height: 40; padding: 2em; color: white;"></div>
 
-[[High training accuracy, low test accuracy->Room3]]
-[[Both training and test accuracy are low->Fail2]]
-[[Both are very high->Fail2]]
+<b>Jan von der Assen</b>, Muriel Franco, Bruno Rodrigues, Burkhard Stiller: Analysis and Classification of Cyberattack Traffic Using the SecGrid Platform; IEEE 46th Conference on Local Computer Networks (LCN) - Demo Session, Edmond, Canada, October 2021, pp 1–3. 
+
+
+[[Proceed to the next room->Room2]]
 </tw-passagedata>
 
-<tw-passagedata pid="4" name="Room3" position="400,100">
-📬 Submission Hell Chamber: Three reviewer emails lie on the desk.
+<tw-passagedata pid="4" name="Room2" position="400,100">
+📚 Chaotic Lab Room: You step into a lab full of container ghosts. Diagrams of bridge and overlay networks cover the walls. Several Docker containers are running on-screen, trying to communicate with each other.
 
-**Question: Which email most likely indicates acceptance?**
+<div style="background: url('lab.png') no-repeat center center; background-size: cover; height: 50vh; padding: 2em; color: white;"></div>
+<b>Question:</b> In Docker’s default bridge network, which of the following enables two containers to communicate?
 
-[["We really appreciate your work..." "Minor revisions required"->Room4]]
-[["Major revision needed, insufficient experiments"->Fail3]]
-[["Out of scope, please consider another journal"->Fail3]]
+[[Access each other by container name->Room3]]
+[[Access each other by host machine IP->Fail2]]
+[[Only possible using host network mode->Fail2]]
+[[Requires manually assigned static IPs->Fail2]]
 </tw-passagedata>
 
-<tw-passagedata pid="5" name="Room4" position="500,100">
-🎓 Defense Tribunal Room: The committee members stare at you coldly.
+<!-- 
+<tw-passagedata pid="5" name="RoomDockerSuccess" tags="" position="500,100" size="100,100">
+🎉 You used the container name to resolve DNS successfully, allowing the containers to communicate!
 
-**Question: Why is the identity matrix added to the adjacency matrix in GCN?**
+Docker's default bridge network supports automatic DNS resolution based on container names, as long as they're on the same custom network.
 
-[[To prevent information loss from isolated nodes->Room5]]
-[[To improve training speed->Fail4]]
-[[To reduce overfitting->Fail4]]
+[[Proceed to the next room->Room3]]
+</tw-passagedata> -->
+
+
+<tw-passagedata pid="6" name="Room3" position="600,100">
+🏫 <b>Computer Networks and Distributed Systems Lecture Hall</b>:  
+You step into a dim classroom with "Computer Networks and Distributed Systems Lecture" written on the whiteboard.  
+
+<div style="background: url('classroom.png') no-repeat center center; background-size: cover; height: 50vh; padding: 2em; color: white;"></div>
+
+<b>Question:</b> In IP multicast, which of the following best describes how data is delivered?
+
+[[The source sends one copy that is replicated only at branching points in the network->Room4]]  
+[[The source sends multiple copies, one to each receiver->Fail3]]  
+[[Each receiver must initiate a separate TCP connection to the sender->Fail3]]
 </tw-passagedata>
 
-<tw-passagedata pid="6" name="Room5" position="600,100">
+<tw-passagedata pid="7" name="Room4" position="700,100">
+🕳 <b>Proposal Abyss</b>:  
+You've reached the midpoint of your PhD journey.  
+You’re floating in the void between coursework and real research.  
+A voice echoes from the abyss: What is your research methodology?”
+
+<div style="background: url('proposal.png') no-repeat center center; background-size: cover; height: 50vh; padding: 2em; color: white;"></div>
+
+<b>Question:</b> Which of the following best characterizes dynamic analysis in software systems?
+
+[[It verifies code correctness through formal proofs and symbolic execution->Fail4]] 
+[[It relies solely on source code structure without executing the program->Fail4]]
+[[It observes system behavior at runtime, often using instrumentation or tracing->Room5]] 
+</tw-passagedata>
+
+<tw-passagedata pid="8" name="Room5" position="800,100">
 🧠 Anxiety Hallway: The walls are filled with deadlines and ticking clocks.
 
-**Question: What most commonly triggers PhD anxiety?**
+<div style="background: url('corridor.png') no-repeat center center; background-size: cover; height: 50vh; padding: 2em; color: white;"></div>
 
-[[Long silence after submission->Room6]]
-[[Eating too regularly->Fail5]]
-[[Publishing too many weak papers->Fail5]]
+<b>Question:</b> How many CSG posters are there along the hallway?
+
+[[12->Fail5]]  
+[[14->Room6]] 
+[[10->Fail5]]
+
 </tw-passagedata>
 
-<tw-passagedata pid="7" name="Room6" position="700,100">
-⌛ Procrastination Zone: A loud ticking clock echoes in the background.
+<tw-passagedata pid="9" name="Room6" position="900,100">
+📚 <b>Nihilistic Digital-Library</b>:  
+The hallway opens into a vast, empty archive room filled with flickering terminals.  
+A screen glows dimly with a message:  
+<i>"The past is gone. The history is a fact."</i>
 
-**Question: What were you doing the night before your defense slides were due?**
+<div style="background: url('ifipdl.png') no-repeat center center; background-size: cover; height: 70vh; padding: 2em; color: white;"></div>
 
-[[Making final edits->Room7]]
-[[Gaming->Fail6]]
-[[Didn’t prepare at all->Fail6]]
+<b>Question:</b> How many proceedings are listed in the IFIP-TC6 digital library archive?
+[[569->Room7]]  
+[[513->Fail6]]  
+[[624->Fail6]]
 </tw-passagedata>
 
-<tw-passagedata pid="8" name="Room7" position="800,100">
-🔐 Graduation Gate:
 
-**Final question: Please enter your advisor’s last name to complete graduation registration.**
+<tw-passagedata pid="10" name="Room7" position="1000,100">
+🔐 <b>Server Room</b>:  
+You step into the server room — a humming server chamber with blinking lights and rack-mounted switches.  
+A lone Cisco Catalyst switch sits on a desk under a sticky note labeled:  
+<i>"Only those who understand ACLs may pass."</i>
+<div style="background: url('serverroom.png') no-repeat center center; background-size: cover; height: 70vh; padding: 2em; color: white;"></div>
+<b> Question:</b> Which command displays all access control lists configured on a Cisco Catalyst switch?
 
-[[Zhang->Room8]]
-[[Li->Fail7]]
-[[Wang->Fail7]]
+[[config access-group->Fail7]]  
+[[show run vlan-acl->Fail7]]
+[[show access-lists->Room8]]  
 </tw-passagedata>
 
-<tw-passagedata pid="9" name="Room8" position="900,100">
+
+<tw-passagedata pid="11" name="Room8" position="1100,100">
+🪑 <b>Meeting Room</b>:  
+You walk into a quiet, echoing meeting room.  
+The chairs are empty, but the silence is full of memories. 
+<div style="background: url('meetingroompng.png') no-repeat center center; background-size: cover; height: 70vh; padding: 2em; color: white;"></div>
+<b>Question:</b> Who was the graduate student you advised as first supervisor?
+
+[[Flavia Fulea->Room9]]  
+[[Rinor Sefa->Fail8]]  
+[[Timo Schenk->Fail8]]
+</tw-passagedata>
+
+
+<tw-passagedata pid="13" name="Room9" position="900,100">
 🎉 Congratulations! You’ve completed the PhD journey and escaped the Labyrinth.
-
-May your future be free from Reviewer 2.
 </tw-passagedata>
 
 <!-- Fail paths -->
-<tw-passagedata pid="10" name="Fail1" position="200,300">
-❌ Wrong answer: You’re trapped in the proposal dungeon for another week.
-[[Try again->Room1]]
+<tw-passagedata pid="14" name="Fail1" position="200,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room2]]
 </tw-passagedata>
 
-<tw-passagedata pid="11" name="Fail2" position="300,300">
-❌ Wrong answer: The experiment failed. It’ll take two weeks to rerun.
-[[Try again->Room2]]
+<tw-passagedata pid="15" name="Fail2" position="300,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room3]]
 </tw-passagedata>
 
-<tw-passagedata pid="12" name="Fail3" position="400,300">
-❌ Wrong answer: Your paper got rejected, you spend a week sulking.
-[[Try again->Room3]]
+<tw-passagedata pid="16" name="Fail3" position="400,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room4]]
 </tw-passagedata>
 
-<tw-passagedata pid="13" name="Fail4" position="500,300">
-❌ Wrong answer: The committee frowns. Your defense is postponed.
-[[Try again->Room4]]
+<tw-passagedata pid="17" name="Fail4" position="500,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room5]]
 </tw-passagedata>
 
-<tw-passagedata pid="14" name="Fail5" position="600,300">
-❌ Wrong answer: Anxiety consumes you in a late-night spiral.
-[[Try again->Room5]]
+<tw-passagedata pid="18" name="Fail5" position="600,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room6]]
 </tw-passagedata>
 
-<tw-passagedata pid="15" name="Fail6" position="700,300">
-❌ Wrong answer: You’re grilled in your defense for lack of preparation.
-[[Try again->Room6]]
+<tw-passagedata pid="19" name="Fail6" position="700,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room7]]
 </tw-passagedata>
 
-<tw-passagedata pid="16" name="Fail7" position="800,300">
-❌ Wrong answer: The system fails to verify your name. Graduation denied.
-[[Try again->Room7]]
+<tw-passagedata pid="20" name="Fail7" position="800,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room8]]
+</tw-passagedata>
+
+<tw-passagedata pid="21" name="Fail8" position="900,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room9]]
+</tw-passagedata>
+
+<tw-passagedata pid="22" name="Fail9" position="1000,300">
+❌ Wrong answer: Choose your punishment!
+[[Go to the next room->Room10]]
 </tw-passagedata>
 
 </tw-storydata>
